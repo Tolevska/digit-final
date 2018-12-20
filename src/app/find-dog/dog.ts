@@ -1,6 +1,6 @@
 export interface IDog {
     id: number;
-    status: string;
+    status: Status;
     code: number;
     size: string;
     gender: string;
@@ -10,3 +10,12 @@ export interface IDog {
     imageUrl: string;
 }
 
+export enum Status {
+    adopted,
+    homeless
+}
+  
+export enum Gender {
+    male = 0,
+    female = 1
+}

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { DogService } from './dog.service';
-import { IDog } from './dog';
-import {MatDialog} from '@angular/material';
+import { IDog } from '../find-dog/dog';
+import { DogService } from '../find-dog/dog.service';
+import { MatDialog } from '../../../node_modules/@angular/material';
 import { DogDetailsComponent } from '../dog-details/dog-details.component';
 
 @Component({
-  selector: 'app-find-dog',
-  templateUrl: './find-dog.component.html',
-  styleUrls: ['./find-dog.component.css']
+  selector: 'app-adopt-dog',
+  templateUrl: './adopt-dog.component.html',
+  styleUrls: ['./adopt-dog.component.sass']
 })
-export class FindDogComponent implements OnInit {
+export class AdoptDogComponent implements OnInit {
 
   public dogs: IDog[];
 
@@ -18,7 +18,7 @@ export class FindDogComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.DS.getDogs().subscribe (
+    this.DS.getHomelessDogs().subscribe (
       result => {
         console.log(result);
         this.dogs = result;

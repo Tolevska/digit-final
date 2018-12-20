@@ -11,13 +11,13 @@ import { HomeComponent } from './home/home.component';
 import {  MatTheme } from './theme-lib';
 import { FindDogComponent } from './find-dog/find-dog.component';
 import { DogTileComponent } from './find-dog/dog-tile/dog-tile.component';
-import { DogService } from './find-dog/dog.service';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DogDetailsComponent } from './dog-details/dog-details.component';
 import { ReportComponent } from './report/report.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdoptDogComponent } from './adopt-dog/adopt-dog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     DogDetailsComponent,
     ReportComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AdoptDogComponent
   ],
   entryComponents: [
     //za poopup dialogot mora vie entryComponents da se dodadat
@@ -46,7 +47,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [DogService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
