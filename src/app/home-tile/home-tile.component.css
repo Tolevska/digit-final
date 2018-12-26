@@ -129,21 +129,10 @@
 
 .krug {
     border-radius: 100%;
-    /* opacity: 0.8; */
 }
 
 .opac{
     opacity: 0.6;
-}
-
-.mat-card:not([class*=mat-elevation-z]) {
-    box-shadow: 0 0px 0px -0px rgba(0,0,0,0), 0 1px 1px 0 rgba(0,0,0,0), 0 1px 3px 0 rgba(0,0,0,0);
-}
-
-.left {
-    /* transform: translateX(83%); */
-    /* position: relative;
-    left: 500px; */
 }
 
 .kocka{
@@ -151,34 +140,6 @@
     width: 80px;
     overflow: hidden;
 }
-
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-mat-card{
-    width: 10%;
-    /* margin-top: 100px;
-    margin-bottom:100px; */
-    height:auto;
-    position: relative;
-    left: 1300px;
-    
-    background: transparent;
-}
-/*  
-mat-card>img {
-     padding-bottom: 15px; 
-} */
-
-mat-card-title {
-    padding-bottom: 10px;
-}
-
 
 .homebtn {
     display: flex;
