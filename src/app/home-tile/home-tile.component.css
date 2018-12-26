@@ -166,7 +166,11 @@ mat-card{
     margin-bottom:100px; */
     height:auto;
     position: relative;
+<<<<<<< HEAD
     left: 1300px;
+=======
+    left: 1050px;
+>>>>>>> 251c32c137e0b81fc9906e752d089593d5a5d55c
     
     background: transparent;
 }
