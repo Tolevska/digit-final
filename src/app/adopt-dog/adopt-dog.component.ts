@@ -7,12 +7,12 @@ import { DogDetailsComponent } from '../dog-details/dog-details.component';
 @Component({
   selector: 'app-adopt-dog',
   templateUrl: './adopt-dog.component.html',
-  styleUrls: ['./adopt-dog.component.sass']
+  styleUrls: ['./adopt-dog.component.css']
 })
 export class AdoptDogComponent implements OnInit {
-
   public dogs: IDog[];
 
+  public dogForDelete;
   constructor(private DS: DogService,public dialog: MatDialog) { 
 
   }
@@ -25,7 +25,16 @@ export class AdoptDogComponent implements OnInit {
       },
       error => console.log(error)
     )
+  }
 
+  deleteDog(id) {
+    this.DS.getDog(id).subscribe (
+      result => {
+        console.log(result);
+        this.DS.deleteDog(id);
+      },
+      error => console.log(error)
+    )
   }
 
   seeMore(dog : IDog):void {
@@ -39,4 +48,4 @@ export class AdoptDogComponent implements OnInit {
     });
   }
 
-}
+ }

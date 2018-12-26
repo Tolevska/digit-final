@@ -5,7 +5,7 @@ import { IDog } from '../find-dog/dog';
 @Component({
   selector: 'app-dog-details',
   templateUrl: './dog-details.component.html',
-  styleUrls: ['./dog-details.component.sass']
+  styleUrls: ['./dog-details.component.css']
 })
 export class DogDetailsComponent implements OnInit {
 
