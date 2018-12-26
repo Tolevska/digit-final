@@ -1,58 +1,63 @@
-<div class="container" style="margin-top:100px">
-<div class="card">
-  <form [formGroup]="reportForm" (ngSubmit)="reportDog()" style="width: 500px">
-    <div class="form-group">
-      <label for="formGroupExampleInput"> Status  </label>
-      <br>
-      <input type="radio" name="status" formControlName="status" [value]="Status.homeless"> Homeless<br>
-      <input type="radio" name="status" formControlName="status" [value]="Status.adopted"> Adopted<br>
-      
+<div class="container"  style="margin-top:100px">
+  <div class="card">
+    <form class="well pomesteno" [formGroup]="reportForm" (ngSubmit)="reportDog()" style="width: 500px">
+      <div class="form-group">
+        <label for="formGroupExampleInput" class="turquose"> Status </label>
+        <br>
+        <input type="radio" name="status" formControlName="status" [value]="Status.homeless" checked=true> Homeless
+        <br>
+        <input type="radio" name="status" formControlName="status" [value]="Status.adopted"> Adopted
+        <br>
+      </div>
       <!-- <input type="text" class="form-control" formControlName="status" id="status" placeholder="Adopted or Homeless"> -->
-    </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput2">Code</label>
-      <input type="text" class="form-control" formControlName="code" id="code" placeholder="Code">
-    </div>
 
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Size</label>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Code</label>
+        <input type="text" class="form-control" formControlName="code" id="code" placeholder="Code">
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Size</label>
         <input type="text" class="form-control" formControlName="size" id="size" placeholder="Small or big">
       </div>
 
       <div class="form-group">
-          <label for="formGroupExampleInput2">Gender</label> <br>
-          <input type="radio" formControlName="gender" [value]="Gender.male"> Male <br>
-          <input type="radio" formControlName="gender" [value]="Gender.female"> Female <br>
-          
-          <!-- <input type="text" class="form-control" formControlName="gender" id="gender" placeholder="Male or Female"> -->
-        </div>
+        <label for="formGroupExampleInput2" class="turquose">Gender</label>
+        <br>
+        <input type="radio" formControlName="gender" [value]="Gender.male" checked=true> Male
+        <br>
+        <input type="radio" formControlName="gender" [value]="Gender.female"> Female
+        <br>
 
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Location</label>
-            <input type="text" class="form-control" formControlName="location" id="location" placeholder="Location">
-          </div>
+        <!-- <input type="text" class="form-control" formControlName="gender" id="gender" placeholder="Male or Female"> -->
+      </div>
 
-          <div class="form-group">
-              <label for="formGroupExampleInput2">Breed</label>
-              <input type="text" class="form-control" formControlName="breed" id="breed" placeholder="Breed">
-            </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Location</label>
+        <input type="text" class="form-control" formControlName="location" id="location" placeholder="Location">
+      </div>
 
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Description</label>
-                <input type="text" class="form-control" formControlName="description" id="description" placeholder="Description">
-              </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Breed</label>
+        <input type="text" class="form-control" formControlName="breed" id="breed" placeholder="Breed">
+      </div>
 
-              <div class="form-group">
-                  <label for="formGroupExampleInput2">Image</label>
-                  <input type="text" class="form-control" formControlName="image" id="image" placeholder="Your image link">
-                </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Description</label>
+        <input type="text" class="form-control" formControlName="description" id="description" placeholder="Description">
+      </div>
 
-                <button type="submit" class="btn btn-success" >REPORT</button>
-                <button type="button" class="btn btn-danger" [routerLink]="['/home']">CANCEL</button>
-  </form>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="turquose">Image</label>
+        <input type="text" class="form-control" formControlName="image" id="image" placeholder="Your image link">
+      </div>
+
+      <button type="button" class="btn btn-danger" [routerLink]="['/home']">CANCEL</button>
+      <button type="submit" class="btn btn-success desno zeleno-kopce">REPORT</button>
+    </form>
 
 
- </div>
- </div>
-
-
+  </div>
+</div>

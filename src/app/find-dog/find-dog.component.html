@@ -8,33 +8,34 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Status</th>
-                            <th>Size</th>
-                            <th>Gender</th>
-                            <th>Location</th>
-                            <th>See more</th>
+                            <th></th>
+                            <th class="zeleno">Size</th>
+                            <th class="zeleno">Gender</th>
+                            <th class="zeleno">Location</th>
+                            <th class="zeleno">See more</th>
+                            <th class="zeleno">Report found</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let dog of dogs">
-                            <td> {{dog.status}}</td>
-                            <td> {{dog.size}}</td>
-                            <td> {{dog.gender}}</td>
-                            <td> {{dog.location}}</td>
-                            <td>
-                                <button class="btn btn-primary" (click)="seeMore(dog)">Details </button>
-                            </td>
-
+                            <!-- <span *ngIf="!dog.deleted"> -->
+                                <td *ngIf="!dog.deleted">
+                                       <img src="../../assets/dog.png">
+                                </td>
+                                <td *ngIf="!dog.deleted"> {{dog.size}}</td>
+                                <td *ngIf="!dog.deleted"> {{dog.gender}}</td>
+                                <td *ngIf="!dog.deleted"> {{dog.location}}</td>
+                                <td *ngIf="!dog.deleted">
+                                    <button class="btn btn-primary zeleno-kopce" (click)="seeMore(dog)">Details </button>
+                                </td>
+                                <td *ngIf="!dog.deleted">
+                                    <button class="btn btn-primary zeleno-kopce" (click)="deleteDog(dog.id)">Found</button>
+                                </td>
+                            <!-- </span> -->
                         </tr>
                     </tbody>
                 </table>
-
             </div>
-
         </div>
-
-
     </div>
-
-
 </div>

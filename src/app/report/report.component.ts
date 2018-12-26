@@ -8,7 +8,7 @@ import { Status, Gender } from '../find-dog/dog';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.sass']
+  styleUrls: ['./report.component.css']
 })
 export class ReportComponent implements OnInit {
   Status = Status;
@@ -28,6 +28,7 @@ export class ReportComponent implements OnInit {
       breed: ['',Validators.required],
       description: ['',Validators.required],
       image: ['',Validators.required],
+      deleted: false
     });
   }
 
@@ -44,6 +45,7 @@ export class ReportComponent implements OnInit {
       breed: this.reportForm.controls['breed'].value,
       description: this.reportForm.controls['description'].value,
       imageUrl: this.reportForm.controls['image'].value,
+      deleted: this.reportForm.controls.deleted.value
     }
     // console.log(dog);
     console.log(status);

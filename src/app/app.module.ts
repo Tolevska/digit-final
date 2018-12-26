@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AdoptDogComponent } from './adopt-dog/adopt-dog.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AdoptDogComponent } from './adopt-dog/adopt-dog.component';
     ReportComponent,
     FooterComponent,
     ContactUsComponent,
-    AdoptDogComponent
+    AdoptDogComponent,
+    AboutUsComponent
   ],
   entryComponents: [
     //za poopup dialogot mora vie entryComponents da se dodadat
@@ -46,7 +48,7 @@ import { AdoptDogComponent } from './adopt-dog/adopt-dog.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

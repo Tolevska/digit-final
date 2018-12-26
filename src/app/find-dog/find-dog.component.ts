@@ -13,6 +13,7 @@ export class FindDogComponent implements OnInit {
 
   public dogs: IDog[];
 
+  public dogForDelete;
   constructor(private DS: DogService,public dialog: MatDialog) { 
 
   }
@@ -25,7 +26,16 @@ export class FindDogComponent implements OnInit {
       },
       error => console.log(error)
     )
+  }
 
+  deleteDog(id) {
+    this.DS.getDog(id).subscribe (
+      result => {
+        console.log(result);
+        this.DS.deleteDog(id);
+      },
+      error => console.log(error)
+    )
   }
 
   seeMore(dog : IDog):void {

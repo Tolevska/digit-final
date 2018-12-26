@@ -8,6 +8,7 @@ export interface IDog {
     breed: string; //rasa
     description: string;
     imageUrl: string;
+    deleted: boolean;
 }
 
 export enum Status {

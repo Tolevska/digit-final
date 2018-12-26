@@ -1,40 +1,41 @@
 <div class="container" style="margin-top:100px">
-  <div class="card">
-      <div class="card-header">
-          <h2>List of homeless dogs</h2>
-      </div>
-      <div class="card-body">
-          <div class="table-responsive">
-              <table class="table">
-                  <thead>
-                      <tr>
-                          <th>Status</th>
-                          <th>Size</th>
-                          <th>Gender</th>
-                          <th>Location</th>
-                          <th>See more</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr *ngFor="let dog of dogs">
-                          <td> {{dog.status}}</td>
-                          <td> {{dog.size}}</td>
-                          <td> {{dog.gender}}</td>
-                          <td> {{dog.location}}</td>
-                          <td>
-                              <button class="btn btn-primary" (click)="seeMore(dog)">Details </button>
-                          </td>
-
-                      </tr>
-                  </tbody>
-              </table>
-
-          </div>
-
-      </div>
-
-
-  </div>
-
-
-</div>
+        <div class="card">
+            <div class="card-header">
+                <h2>List of homeless dogs</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="zeleno">Size</th>
+                                <th class="zeleno">Gender</th>
+                                <th class="zeleno">Location</th>
+                                <th class="zeleno">See more</th>
+                                <th class="zeleno">Report adopted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dog of dogs">
+                                <!-- <span *ngIf="!dog.deleted"> -->
+                                    <td *ngIf="!dog.deleted">
+                                           <img src="../../assets/dog.png">
+                                    </td>
+                                    <td *ngIf="!dog.deleted"> {{dog.size}}</td>
+                                    <td *ngIf="!dog.deleted"> {{dog.gender}}</td>
+                                    <td *ngIf="!dog.deleted"> {{dog.location}}</td>
+                                    <td *ngIf="!dog.deleted">
+                                        <button class="btn btn-primary zeleno-kopce" (click)="seeMore(dog)">Details </button>
+                                    </td>
+                                    <td *ngIf="!dog.deleted">
+                                        <button class="btn btn-primary zeleno-kopce" (click)="deleteDog(dog.id)">Adopted</button>
+                                    </td>
+                                <!-- </span> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
